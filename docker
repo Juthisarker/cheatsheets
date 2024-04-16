@@ -1,0 +1,12 @@
+Create a normal docker file
+  
+FROM node:alpine -> specify base image
+WORKDIR /app -> set the working directory to '/app' in the container. All following commands will be issued relative to this dir
+COPY package.json ./ -> copy over only the package.json file
+RUN np install -> install all dependencies 
+COPY ./ ./ copy over all of our remaing source 
+CMD ["npm", "start" ] -> ommand to run when the container starts up
+
+
+run the docker file
+docker run -p 8082:8082 [image name]

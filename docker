@@ -10,3 +10,7 @@ CMD ["npm", "start" ] -> ommand to run when the container starts up
 
 run the docker file
 docker run -p 8082:8082 [image name]
+
+save docker image
+docker save -o E:\micro-service-again\docker\images\image.tar (save-image name)
+
